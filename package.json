@@ -1,5 +1,5 @@
 {
-  "name": "initconvbottest",
+  "name": "capbot",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,9 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "botbuilder": "^3.14.0",
-    "dotenv": "^5.0.0",
-    "ngrok": "^2.2.26",
-    "restify": "^6.3.4"
+    "botbuilder": "^3.14.1",
+    "dotenv": "^5.0.1",
+    "restify": "^6.4.0"
   }
 }
