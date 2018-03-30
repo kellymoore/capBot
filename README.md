@@ -19,6 +19,6 @@ npm install --save botbuilder
 ```
 * Once the above instructions have been completed, run the following command:
 ```
-nodemon
+nodemon app.js
 ```
 * Open the BotFramework Emulator and navigate to `localhost:3978/api/messages`, and if running locally with empty `App ID` and `App Password` variables in the `.env` file you can leave these fields empty.
