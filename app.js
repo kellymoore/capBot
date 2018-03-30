@@ -22,3 +22,7 @@ const bot = new builder.UniversalBot(connector);
 bot.dialog('/',function (session){
     session.send("Hello World!")
 });
+
+//replace with 'How did you get so smart in the first place?' trigger action
+bot.dialog('/intelligence-training', require('./dialogs/intelligence-training')).triggerAction({ matches:[/^training/i] });
+bot.dialog('/intelligence-diagram', require('./dialogs/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
