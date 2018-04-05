@@ -27,3 +27,4 @@ bot.dialog('/chatbot-definition', require('./dialogs/chatbot-definition')).trigg
 bot.dialog('/chatbot-example-alexa', require('./dialogs/chatbot-example-alexa')).triggerAction({ matches:[/^I think I need an example/i] });
 bot.dialog('/chatbot-example-spotify', require('./dialogs/chatbot-example-spotify')).triggerAction({ matches:[/^Give me another/i] });
 bot.dialog('/chatbot-website-differences', require('./dialogs/chatbot-website-differences')).triggerAction({ matches:[/^Why would I choose a chatbot over a website or app?/i] });
+bot.dialog('/chatbot-stats', require('./dialogs/chatbot-stats')).triggerAction({ matches:[/^Convince me/i] });
