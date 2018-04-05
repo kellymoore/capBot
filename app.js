@@ -23,8 +23,7 @@ bot.dialog('/',function (session){
     session.send("Hello World!")
 });
 
-bot.dialog('/chatbot-definition', require('./dialogs/chatbot-definition')).triggerAction({ matches:[/^define/i] });
-bot.dialog('/chatbot-example-alexa', require('./dialogs/chatbot-example-alexa')).triggerAction({ matches:[/^I think I need an example/i] });
-bot.dialog('/chatbot-example-spotify', require('./dialogs/chatbot-example-spotify')).triggerAction({ matches:[/^Give me another/i] });
-bot.dialog('/chatbot-website-differences', require('./dialogs/chatbot-website-differences')).triggerAction({ matches:[/^Why would I choose a chatbot over a website or app?/i] });
-bot.dialog('/chatbot-stats', require('./dialogs/chatbot-stats')).triggerAction({ matches:[/^Convince me/i] });
+bot.dialog('/chatbot-definition', require('./dialogs/definition/chatbot-definition')).triggerAction({ matches:[/^define/i] });
+bot.dialog('/chatbot-example-alexa', require('./dialogs/definition/chatbot-example-alexa')).triggerAction({ matches:[/^I think I need an example/i] });
+bot.dialog('/chatbot-example-spotify', require('./dialogs/definition/chatbot-example-spotify')).triggerAction({ matches:[/^Give me another/i] });
+bot.dialog('/chatbot-website-differences', require('./dialogs/definition/chatbot-website-differences')).triggerAction({ matches:[/^Why would I choose a chatbot over a website or app?/i] });
