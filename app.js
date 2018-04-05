@@ -31,8 +31,8 @@ bot.dialog('/',function (session){
 });
 
 //replace with 'How did you get so smart in the first place?' trigger action
-bot.dialog('/intelligence-training', require('./dialogs/intelligence-training')).triggerAction({ matches:[/^training/i] });
-bot.dialog('/intelligence-diagram', require('./dialogs/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
+bot.dialog('/intelligence-training', require('./dialogs/intelligence/intelligence-training')).triggerAction({ matches:[/^training/i] });
+bot.dialog('/intelligence-diagram', require('./dialogs/intelligence/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
 bot.dialog('/chatbot-definition', require('./dialogs/definition/chatbot-definition')).triggerAction({ matches:[/^define/i] });
 bot.dialog('/chatbot-example-alexa', require('./dialogs/definition/chatbot-example-alexa')).triggerAction({ matches:[/^I think I need an example/i] });
 bot.dialog('/chatbot-example-spotify', require('./dialogs/definition/chatbot-example-spotify')).triggerAction({ matches:[/^Give me another/i] });
