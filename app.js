@@ -30,6 +30,10 @@ bot.dialog('/',function (session){
     session.send("Sorry I didn't understand.");
 });
 
+bot.dialog('/chatbot-definition', require('./dialogs/definition/chatbot-definition')).triggerAction({ matches:[/^define/i] });
+bot.dialog('/chatbot-example-alexa', require('./dialogs/definition/chatbot-example-alexa')).triggerAction({ matches:[/^I think I need an example/i] });
+bot.dialog('/chatbot-example-spotify', require('./dialogs/definition/chatbot-example-spotify')).triggerAction({ matches:[/^Give me another/i] });
+bot.dialog('/chatbot-website-differences', require('./dialogs/definition/chatbot-website-differences')).triggerAction({ matches:[/^Why would I choose a chatbot over a website or app?/i] });
 bot.dialog('WelcomeDialog', require('./dialogs/intro/chatbot-welcome')).triggerAction({matches: 'Welcome'});
 bot.dialog('StageHelpDialog', require('./dialogs/intro/chatbot-stage-help')).triggerAction({matches: 'StageHelp'});
 bot.dialog('NextHelpDialog', require('./dialogs/intro/chatbot-next-help')).triggerAction({matches: 'NextHelp'});
