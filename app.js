@@ -11,8 +11,8 @@ server.listen(process.env.port || process.env.PORT || 3978,
 );
 
 const connector = new builder.ChatConnector({
-    appId: process.env.MicrosoftAppId,
-    appPassword: process.env.MicrosoftAppPassword
+    // appId: process.env.MicrosoftAppId,
+    // appPassword: process.env.MicrosoftAppPassword
 });
 
 server.post('/api/messages', connector.listen());
@@ -30,6 +30,6 @@ bot.dialog('/',function (session){
     session.send("Sorry I didn't understand.");
 });
 
-bot.dialog('WelcomeDialog', require('./dialogs/chatbot-welcome')).triggerAction({matches: 'Welcome'});
-bot.dialog('StageHelpDialog', require('./dialogs/chatbot-stage-help')).triggerAction({matches: 'StageHelp'});
-bot.dialog('NextHelpDialog', require('./dialogs/chatbot-next-help')).triggerAction({matches: 'NextHelp'});
+bot.dialog('WelcomeDialog', require('./dialogs/intro/chatbot-welcome')).triggerAction({matches: 'Welcome'});
+bot.dialog('StageHelpDialog', require('./dialogs/intro/chatbot-stage-help')).triggerAction({matches: 'StageHelp'});
+bot.dialog('NextHelpDialog', require('./dialogs/intro/chatbot-next-help')).triggerAction({matches: 'NextHelp'});
