@@ -36,7 +36,7 @@ bot.recognizer(recognizer);
 
 //Dialogs
 bot.dialog('/',function (session){
-    session.send("Sorry I didn't understand.");
+    session.send('Sorry, I did not understand \'%s\'.', session.message.text);
 });
 
 //-Intro 
