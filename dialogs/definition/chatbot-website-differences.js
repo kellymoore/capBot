@@ -11,7 +11,7 @@ function basicDefinition(session){
         builder.CardImage.create(session, "http://static5.uk.businessinsider.com/image/59ea2d415251a41052232fea-700/messaging%20apps%20social%20networks.png")
     ])
     .buttons([
-        builder.CardAction.imBack(session, "Convince me", "Do do you need more convincing?")
+        builder.CardAction.imBack(session, "Great, so how are they made?", "Chatbots are the new Apps!")
     ]);
     session.endDialog(new builder.Message(session).addAttachment(card));
 }
