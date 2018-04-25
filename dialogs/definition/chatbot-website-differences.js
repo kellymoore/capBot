@@ -11,7 +11,7 @@ function basicDefinition(session){
         builder.CardImage.create(session, "https://i.imgur.com/AhQWbkI.jpg")
     ])
     .buttons([
-        builder.CardAction.imBack(session, "Convince me", "Do do you need more convincing?")
+        builder.CardAction.imBack(session, "Great, so how are they made?", "Chatbots are the new Apps!")
     ]);
     session.endDialog(new builder.Message(session).addAttachment(card));
 }
