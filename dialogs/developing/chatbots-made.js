@@ -13,7 +13,7 @@ function chatbotsMade(session){
         builder.CardImage.create(session, image_url)
     ])
     .buttons([
-        builder.CardAction.imBack(session, "What is Microsoft Bot Framework?", "What's that?")
+        builder.CardAction.imBack(session, "What is Microsoft Bot Framework?", "Microsoft Bot Framework?")
     ]);
     
     session.endDialog(new builder.Message(session).addAttachment(card));
