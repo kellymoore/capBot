@@ -13,7 +13,7 @@ function botFramework(session){
         builder.CardImage.create(session, image_url)
     ])
     .buttons([
-        builder.CardAction.imBack(session, "How difficult is it to build a bot?", "Difficult?")
+        builder.CardAction.imBack(session, "How difficult is it to build a bot?", "Bot Framework is a great help!")
     ]);
     
     session.endDialog(new builder.Message(session).addAttachment(card));

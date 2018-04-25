@@ -12,7 +12,7 @@ function botFramework(session){
         builder.CardImage.create(session, image_url)
     ])
     .buttons([
-        builder.CardAction.imBack(session, "How can I make a bot smart?", "Intellienge")
+        builder.CardAction.imBack(session, "How can I make a bot smart?", "^ Hello World Bot ^")
     ]);
     
     session.endDialog(new builder.Message(session).addAttachment(card));
