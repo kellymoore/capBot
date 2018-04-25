@@ -1,7 +1,6 @@
 const restify = require('restify');
 const builder = require('botbuilder');
 const TypingMiddleware = require('./middleware/typing-delay')
-
 require('dotenv').config()
 
 const server = restify.createServer();
@@ -60,7 +59,6 @@ bot.dialog('/more-tools', require('./dialogs/developing/more-tools')).triggerAct
 //-Intelligence
 bot.dialog('/intelligence-training', require('./dialogs/intelligence/intelligence-training')).triggerAction({matches: 'Intelligence'});
 bot.dialog('/intelligence-diagram', require('./dialogs/intelligence/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
-
 
 bot.dialog('/conversation-id',function(session){
     session.endDialog(session.message.address.conversation.id)

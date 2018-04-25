@@ -8,7 +8,7 @@ function exampleChatbots(session){
     .subtitle("Check out my buddy, Alexa!")
     .text("Amazon Alexa is an example of a chatbot, you can ask her to set timers, purchase items, play your favourite tunes, etc.")
     .images([
-        builder.CardImage.create(session, "https://images-eu.ssl-images-amazon.com/images/I/41iz5Tw82IL._SY300_QL70_.jpg")
+        builder.CardImage.create(session, "https://i.imgur.com/9hlIWNA.jpg")
     ])
     .buttons([
         builder.CardAction.imBack(session, "Give me another", "Need another example?")
