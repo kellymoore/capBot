@@ -1,5 +1,6 @@
 const restify = require('restify');
 const builder = require('botbuilder');
+var path = require('path');
 
 require('dotenv').config()
 
@@ -41,10 +42,12 @@ bot.dialog('/more-tools', require('./dialogs/developing/more-tools')).triggerAct
 //replace with 'How did you get so smart in the first place?' trigger action
 bot.dialog('/intelligence-training', require('./dialogs/intelligence/intelligence-training')).triggerAction({ matches:[/^training/i] });
 bot.dialog('/intelligence-diagram', require('./dialogs/intelligence/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
-bot.dialog('/chatbot-definition', require('./dialogs/definition/chatbot-definition')).triggerAction({ matches:[/^define/i] });
+bot.dialog('/chatbot-definition', require('./dialogs/definition/chatbot-definition')).triggerAction({ matches:'Define' });
 bot.dialog('/chatbot-example-alexa', require('./dialogs/definition/chatbot-example-alexa')).triggerAction({ matches:[/^I think I need an example/i] });
 bot.dialog('/chatbot-example-spotify', require('./dialogs/definition/chatbot-example-spotify')).triggerAction({ matches:[/^Give me another/i] });
 bot.dialog('/chatbot-website-differences', require('./dialogs/definition/chatbot-website-differences')).triggerAction({ matches:[/^Why would I choose a chatbot over a website or app?/i] });
+bot.dialog('/chatbot-move-on', require('./dialogs/definition/chatbot-move-on')).triggerAction({ matches:[/^Convince me/i] });
+
 bot.dialog('WelcomeDialog', require('./dialogs/intro/chatbot-welcome')).triggerAction({matches: 'Welcome'});
 bot.dialog('StageHelpDialog', require('./dialogs/intro/chatbot-stage-help')).triggerAction({matches: 'StageHelp'});
 bot.dialog('NextHelpDialog', require('./dialogs/intro/chatbot-next-help')).triggerAction({matches: 'NextHelp'});
