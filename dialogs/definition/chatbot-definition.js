@@ -8,7 +8,7 @@ function basicDefinition(session){
     .subtitle("Well, here's the official definition...")
     .text("'A chatbot is a service, often powered by AI, that lets a person interact with software in their own natural language.' Kinda like how you’re talking to this presentation instead of hitting next on PowerPoint!")
     .images([
-        builder.CardImage.create(session, "https://i.imgur.com/zxTR4yC.jpg")
+        builder.CardImage.create(session, "https://i.imgur.com/OlZfIt9.png")
     ])
     .buttons([
         builder.CardAction.imBack(session, "I think I need an example", "Need an example?")
