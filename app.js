@@ -11,8 +11,8 @@ server.listen(process.env.port || process.env.PORT || 3978,
 );
 
 const connector = new builder.ChatConnector({
-    //appId: process.env.MicrosoftAppId,
-    //appPassword: process.env.MicrosoftAppPassword
+    appId: process.env.MicrosoftAppId,
+    appPassword: process.env.MicrosoftAppPassword
 });
 
 server.post('/api/messages', connector.listen());
