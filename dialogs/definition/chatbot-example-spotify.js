@@ -7,7 +7,7 @@ function exampleChatbots(session){
     .title("Spotify Bot")
     .text("You can tell Spotify what you want to listen to on Facebook Messenger!")
     .images([
-        builder.CardImage.create(session, "https://techcrunch.com/wp-content/uploads/2017/04/media-20170418.png")
+        builder.CardImage.create(session, "https://i.imgur.com/ewdqgB9.jpg")
     ])
     .buttons([
         builder.CardAction.imBack(session, "Why would I choose a chatbot over a website or app?", "Are things clearer yet?")

@@ -1,6 +1,6 @@
 module.exports = {
     delayResponseTyping: function (session, event) {
         session.sendTyping();
-        session.delay(2000);
+        session.delay(1000);
     },
 }
