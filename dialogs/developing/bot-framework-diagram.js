@@ -3,7 +3,7 @@ var builder = require('botbuilder');
 module.exports = [botFramework];
 
 function botFramework(session){
-    var image_url = "https://msdnshared.blob.core.windows.net/media/2016/11/connector.png"
+    var image_url = "https://i.imgur.com/AgKyF8o.png"
 
     var card = new builder.HeroCard(session)
     .title("What is Microsoft Bot Framework?")

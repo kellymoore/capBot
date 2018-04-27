@@ -11,7 +11,7 @@ function benefitsUsers(session){
         builder.CardImage.create(session, "https://i.imgur.com/YEsjF1N.png")
     ])
     .buttons([
-        builder.CardAction.imBack(session, "<next dialog>", "Sounds good to me!")
+        builder.CardAction.imBack(session, "Give us a quote to end on CAP", "Sounds good to me!")
     ]);
     session.endDialog(new builder.Message(session).addAttachment(card));
 }
