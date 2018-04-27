@@ -51,9 +51,16 @@ bot.dialog('/more-tools', require('./dialogs/developing/more-tools')).triggerAct
 bot.dialog('/intelligence-training', require('./dialogs/intelligence/intelligence-training')).triggerAction({matches: 'Intelligence'});
 bot.dialog('/intelligence-diagram', require('./dialogs/intelligence/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
 
+//-Next Big Thing
+bot.dialog('/big-thing-next', require('./dialogs/big-thing/big-thing-next')).triggerAction({ matches:[/^So, are ChatBots going to be the next big thing?/i] });
+
 //-Benefits
-bot.dialog('/benefits-users', require('./dialogs/benefits/benefits-users')).triggerAction({ matches:[/^benefits/i] });
+bot.dialog('/benefits-users', require('./dialogs/benefits/benefits-users')).triggerAction({ matches:[/^What makes a chatbot good for users?/i] });
 bot.dialog('/benefits-developers', require('./dialogs/benefits/benefits-developers')).triggerAction({ matches:[/^So what's in it for us?/i] });
+
+//-End
+bot.dialog('/big-thing-quote', require('./dialogs/big-thing/big-thing-quote')).triggerAction({ matches:[/^Give us a quote to end on CAP/i] });
+bot.dialog('/bye', require('./dialogs/big-thing/big-thing-bye')).triggerAction({ matches:[/^Bye CAP!/i] });
 
 bot.dialog('/conversation-id',function(session){
     session.endDialog(session.message.address.conversation.id)

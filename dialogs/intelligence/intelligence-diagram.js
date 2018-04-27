@@ -11,7 +11,7 @@ function trainingDiagram(session){
         { url: "https://msdnshared.blob.core.windows.net/media/2017/09/LUIS.gif" }
     ])
     .buttons([
-        builder.CardAction.imBack(session, "<trigger text for next action>", "Does that make sense?")
+        builder.CardAction.imBack(session, "So, are ChatBots going to be the next big thing?", "Does that make sense?")
     ]);
     session.endDialog(new builder.Message(session).addAttachment(card));
 }
