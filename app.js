@@ -60,6 +60,10 @@ bot.dialog('/more-tools', require('./dialogs/developing/more-tools')).triggerAct
 bot.dialog('/intelligence-training', require('./dialogs/intelligence/intelligence-training')).triggerAction({matches: 'Intelligence'});
 bot.dialog('/intelligence-diagram', require('./dialogs/intelligence/intelligence-diagram')).triggerAction({ matches:[/^Do you have a diagram?/i] });
 
+//-Benefits
+bot.dialog('/benefits-users', require('./dialogs/benefits/benefits-users')).triggerAction({ matches:[/^benefits/i] });
+bot.dialog('/benefits-developers', require('./dialogs/benefits/benefits-developers')).triggerAction({ matches:[/^So what's in it for us?/i] });
+
 bot.dialog('/conversation-id',function(session){
     session.endDialog(session.message.address.conversation.id)
 }).triggerAction({ matches:[/^conversation id/i] });
