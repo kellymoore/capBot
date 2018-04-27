@@ -1,6 +1,5 @@
 const restify = require('restify');
 const builder = require('botbuilder');
-const TypingMiddleware = require('./middleware/typing-delay')
 require('dotenv').config()
 
 const server = restify.createServer();
@@ -18,14 +17,6 @@ const connector = new builder.ChatConnector({
 server.post('/api/messages', connector.listen());
 
 const bot = new builder.UniversalBot(connector);
-
-//Middleware
-bot.use({
-    botbuilder: function (session, next){
-        TypingMiddleware.delayResponseTyping(session);
-     next();
-    }
- });
 
 //LUIS
 const LuisModelUrl = 'https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/' + process.env.LuisAppId + '?subscription-key=' + process.env.LuisAPIKey;
