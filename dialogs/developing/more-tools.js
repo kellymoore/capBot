@@ -3,7 +3,7 @@ var builder = require('botbuilder');
 module.exports = [botFramework];
 
 function botFramework(session){
-    var image_url= "https://image.ibb.co/miMroc/mcs.png"  
+    var image_url= "https://i.imgur.com/BUxAPwf.png"  
     var card = new builder.HeroCard(session)
     .title("How to make a ChatBot Intelligent?")
     .subtitle("Microsoft have a suite of tools:")

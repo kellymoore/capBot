@@ -3,7 +3,7 @@ var builder = require('botbuilder');
 module.exports = [chatbotsMade];
 
 function chatbotsMade(session){
-    var image_url = "https://azure.microsoft.com/svghandler/bot-service/?width=600&height=315"
+    var image_url = "https://i.imgur.com/gSYTZO8.png"
 
     var card = new builder.HeroCard(session)
     .title("How are chatbots made?")
