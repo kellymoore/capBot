@@ -8,7 +8,7 @@ function basicDefinition(session){
     .subtitle("In fact...")
     .text("Half the world now uses messaging apps, that's more than the number of people on social networks!")
     .images([
-        builder.CardImage.create(session, "https://i.imgur.com/AhQWbkI.jpg")
+        builder.CardImage.create(session, "https://i.imgur.com/NZGHM68.png")
     ])
     .buttons([
         builder.CardAction.imBack(session, "Great, so how are they made?", "Chatbots are the new Apps!")
